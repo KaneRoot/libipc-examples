@@ -1,0 +1,23 @@
+name: libipc-examples
+version: 0.1.0
+
+authors:
+  - Philippe Pittoli <karchnu@karchnu.fr>
+
+description: |
+  Examples of applications using libipc.
+
+targets:
+  pong:
+    main: src/pong.cr
+  pongd:
+    main: src/pongd.cr
+
+dependencies:
+  ipc:
+    git: https://git.baguette.netlib.re/Baguette/ipc.cr
+    branch: master
+
+crystal: 1.7.1
+
+license: ISC
