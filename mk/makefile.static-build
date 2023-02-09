@@ -1,6 +1,7 @@
 ifdef STATIC
 STATIC_BUILD ?= -static
 CRYSTAL_STATIC_BUILD ?= --static
+ZIG_STATIC_BUILD ?= -Dstatic=true
 endif
 
 # For interactive completion in the shell.

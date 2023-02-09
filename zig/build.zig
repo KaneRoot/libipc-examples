@@ -58,4 +58,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     link_and_install(pongd_exe);
+
+    const is_static = b.option(bool, "static", "Compile static binaries.") orelse false;
+    if (is_static) {
+        ipcd_exe.linkage = .static;
+        tcpd_exe.linkage = .static;
+        pong_exe.linkage = .static;
+        pongd_exe.linkage = .static;
+    }
 }
