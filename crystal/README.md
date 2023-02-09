@@ -1,12 +1,10 @@
-# LibIPC examples
-
 Crystal LibIPC examples, using [libipc bindings shard][bindings].
 
-## Installation
+## Build
 
 ```sh
 # Compiles all examples.
-shards build
+make
 ```
 
 Currently there are 2 examples:
@@ -21,7 +19,7 @@ Currently there are 2 examples:
 ./bin/pong  # run the client
 ```
 
-# LICENCE
+## LICENSE
 
 ISC
 
