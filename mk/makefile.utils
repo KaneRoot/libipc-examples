@@ -1,0 +1,3 @@
+include ../mk/makefile.valgrind
+include ../mk/makefile.bin-inspection
+include ../mk/makefile.static-build

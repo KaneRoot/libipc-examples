@@ -1,0 +1,17 @@
+ifeq ($(SRC),)
+test-src:
+	@echo SRC must be set via command line.
+	@exit 1
+else
+test-src:
+endif
+
+list-obj-files: test-src
+	@# List all .o included in a .a archive.
+	ar t $(SRC)
+list-symbols: test-src
+	@# List all symbols in a .so.
+	nm -D $(SRC)
+list-symbols-alt: test-src
+	@# Alternative: grep .text section in an objdump output.
+	objdump -T $(SRC) | grep text

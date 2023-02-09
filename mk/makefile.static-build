@@ -1,0 +1,6 @@
+ifdef STATIC
+STATIC_BUILD ?= -static
+endif
+
+# For interactive completion in the shell.
+STATIC ?=
